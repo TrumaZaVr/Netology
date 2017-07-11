@@ -1,0 +1,6 @@
+<?php
+$Group=array('Megadeth','Metallica','Anthrax','Slayer','Pantera');
+foreach($Group as $elem)
+{
+    echo $elem.'<br>';
+}
