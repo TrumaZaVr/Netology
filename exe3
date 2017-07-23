@@ -1,0 +1,29 @@
+<?php
+$Animals = array(
+    "Arctic" => array("Lepus arcticus", "Vulpes lagopus", "Orcinus orca"),
+    "Africa" => array("Lemuridae", "Loxodonta africana", "Crocodylia"),
+    "Eurasia" => array("Procyon lotor", "Wolf", "Herpestidae"),
+    "NorthAmerica" => array("Gulo gulo", "Castor fiber", "Chironectes minimus"),
+    "SouthAmerica" => array("Electrophorus electricus", "Callimico goeldii", "Harpia harpyja")
+    )
+;
+echo '<h2>' . "Настоящие животные" . '</h2>';
+foreach($Animals as $continent => $animalsName) {
+    foreach ($animalsName as $FNames) {
+        if (strpos($FNames, ' ') !== false) {
+            $newAnimals[$continent][] = $FNames;
+            echo "$FNames</br>";
+            list($first, $second) = explode(' ', $FNames, 2);
+            $firstWord[] = $first;
+            $secondWord[] = $second;
+        }
+    }
+}
+shuffle($firstWord);
+shuffle($secondWord);
+echo '<h2>' . "Фантастические Животные" . '</h2>';
+for ($i = 0; $i < count($firstWord); $i++) {
+    $RandomAnimals[] = $firstWord[$i] . " " . $secondWord[$i];
+    echo "$RandomAnimals[$i]</br>";
+}
+?>
