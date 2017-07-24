@@ -1,0 +1,15 @@
+<?php
+$jsonWeather = file_get_contents('http://api.openweathermap.org/data/2.5/weather?&units=metric&id=524894&APPID=f772c86bee879aa71f84602bea436973&lang=ru');
+$file_name = 'weather.txt';
+$res_file = fopen($file_name, 'w+');
+fwrite($res_file, $jsonWeather);
+fclose($res_file);
+$weather = json_decode($jsonWeather);
+?>
+
+<div>
+    <h1>температура в городе <?= $weather->name ?></h1>
+    <p>Текущая температура в городе <?= $weather->name ?> : <?= $weather->main->temp ?> &deg; C. </p>
+    <p>Скорость ветра: <?= $weather->wind->speed ?> м/с.</p>
+</div>
+
