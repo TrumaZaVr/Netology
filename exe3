@@ -7,10 +7,11 @@ $Animals = array(
     "SouthAmerica" => array("Electrophorus electricus", "Callimico goeldii", "Harpia harpyja")
     )
 ;
+$newAnimals = array();
 echo '<h2>' . "Настоящие животные" . '</h2>';
 foreach($Animals as $continent => $animalsName) {
     foreach ($animalsName as $FNames) {
-        if (strpos($FNames, ' ') !== false) {
+        if (count(explode(' ', $FNames))=== 2) {
             $newAnimals[$continent][] = $FNames;
             echo "$FNames</br>";
             list($first, $second) = explode(' ', $FNames, 2);
@@ -21,6 +22,7 @@ foreach($Animals as $continent => $animalsName) {
 }
 shuffle($firstWord);
 shuffle($secondWord);
+$RandomAnimals = array();
 echo '<h2>' . "Фантастические Животные" . '</h2>';
 for ($i = 0; $i < count($firstWord); $i++) {
     $RandomAnimals[] = $firstWord[$i] . " " . $secondWord[$i];
