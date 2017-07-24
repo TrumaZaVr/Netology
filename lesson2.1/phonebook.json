@@ -1,0 +1,21 @@
+[{
+  "firstName": "Роман",
+  "lastName": "Василич",
+  "address": "г.Москва, ул.Алтуфьево,42",
+  "phoneNumber": "812 122-1122"
+}, {
+  "firstName": "Михаил",
+  "lastName": "Бобров",
+  "address": "г.Л-А, ул.Ленина,13",
+  "phoneNumber": "823 444-1224"
+}, {
+  "firstName": "Федор",
+  "lastName": "Зайцев",
+  "address": "г.Дуба́й, Дом,5",
+  "phoneNumber": "842 123-1234"
+}, {
+  "firstName": "Кирила",
+  "lastName": "Кошелев",
+  "address": "г.Асака, мкрн.Восточный,22",
+  "phoneNumber": "929 225-1523"
+}]
