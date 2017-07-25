@@ -8,6 +8,8 @@ $Animals = array(
     )
 ;
 $newAnimals = array();
+$firstWord = array();
+$secondWord = array();
 echo '<h2>' . "Настоящие животные" . '</h2>';
 foreach($Animals as $continent => $animalsName) {
     foreach ($animalsName as $FNames) {
